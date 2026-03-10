@@ -15,7 +15,7 @@ public:
 	USceneManager();
 	~USceneManager();
 
-    NO_COPY(USceneManager);
+    NO_COPY(USceneManager)
 
     bool Initialize(const std::string& startSceneName, ID3D11Device* device, ID3D11DeviceContext* context);
     void Shutdown();

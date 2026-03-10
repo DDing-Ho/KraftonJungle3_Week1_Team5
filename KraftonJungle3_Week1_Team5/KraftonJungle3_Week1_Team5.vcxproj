@@ -118,9 +118,11 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -138,6 +140,7 @@
     <ClInclude Include="ImGui\imstb_truetype.h" />
     <ClInclude Include="Mecro.h" />
     <ClInclude Include="SceneAutoRegister.h" />
+    <ClInclude Include="UMainTitleScene.h" />
     <ClInclude Include="USceneManager.h" />
     <ClInclude Include="SceneRegistry.h" />
     <ClInclude Include="Sphere.h" />
@@ -171,6 +174,7 @@
     <ClCompile Include="ImGui\imgui_tables.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="UMainTitleScene.cpp" />
     <ClCompile Include="USceneManager.cpp" />
     <ClCompile Include="SceneRegistry.cpp" />
     <ClCompile Include="UBall.cpp" />
@@ -206,6 +210,7 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Geometry</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>

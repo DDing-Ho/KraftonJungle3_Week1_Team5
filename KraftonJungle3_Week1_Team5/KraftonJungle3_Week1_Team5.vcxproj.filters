@@ -52,9 +52,6 @@
     <Filter Include="00. Engine\01. System\Graphic\Renderer">
       <UniqueIdentifier>{e5d59400-df66-4a32-9a61-4bc4bea52a39}</UniqueIdentifier>
     </Filter>
-    <Filter Include="00. Engine\01. System\Graphic\Shader">
-      <UniqueIdentifier>{bfa52c2c-cb4b-42b1-a4fc-fcee1ec0c5b6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="00. Engine\01. System\Graphic\Mesh">
       <UniqueIdentifier>{918ea729-424a-453c-bdfa-5552988c73ae}</UniqueIdentifier>
     </Filter>
@@ -81,6 +78,9 @@
     </Filter>
     <Filter Include="00. Engine\01. System\Resource\Texture2D">
       <UniqueIdentifier>{11d4163f-8cf8-4da5-88f8-91d83c6873f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. Engine\01. System\Resource\Shader">
+      <UniqueIdentifier>{bfa52c2c-cb4b-42b1-a4fc-fcee1ec0c5b6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +121,7 @@
       <Filter>00. Engine\01. System\Graphic\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="UShader.h">
-      <Filter>00. Engine\01. System\Graphic\Shader</Filter>
+      <Filter>00. Engine\01. System\Resource\Shader</Filter>
     </ClInclude>
     <ClInclude Include="UMesh.h">
       <Filter>00. Engine\01. System\Graphic\Mesh</Filter>
@@ -168,9 +168,6 @@
     <ClInclude Include="SceneAutoRegister.h">
       <Filter>00. Engine\01. System\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>00. Engine\01. System\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Mecro.h">
       <Filter>00. Engine\99. Define</Filter>
     </ClInclude>
@@ -182,6 +179,21 @@
     </ClInclude>
     <ClInclude Include="UResource.h">
       <Filter>00. Engine\01. System\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="UMainTitleScene.h">
+      <Filter>02. Client\01. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="UEngine.h">
+      <Filter>00. Engine\01. System</Filter>
+    </ClInclude>
+    <ClInclude Include="UResourceManager.h">
+      <Filter>00. Engine\01. System\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="USceneManager.h">
+      <Filter>00. Engine\01. System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="UTexture2D.h">
+      <Filter>00. Engine\01. System\Resource\Texture2D</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +234,7 @@
       <Filter>00. Engine\01. System\Graphic\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="UShader.cpp">
-      <Filter>00. Engine\01. System\Graphic\Shader</Filter>
+      <Filter>00. Engine\01. System\Resource\Shader</Filter>
     </ClCompile>
     <ClCompile Include="UMesh.cpp">
       <Filter>00. Engine\01. System\Graphic\Mesh</Filter>
@@ -257,9 +269,6 @@
     <ClCompile Include="SceneRegistry.cpp">
       <Filter>00. Engine\01. System\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>00. Engine\01. System\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="UMainGameScene.cpp">
       <Filter>02. Client\01. Scene</Filter>
     </ClCompile>
@@ -269,10 +278,28 @@
     <ClCompile Include="UResource.cpp">
       <Filter>00. Engine\01. System\Resource</Filter>
     </ClCompile>
+    <ClCompile Include="UMainTitleScene.cpp">
+      <Filter>02. Client\01. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="UEngine.cpp">
+      <Filter>00. Engine\01. System</Filter>
+    </ClCompile>
+    <ClCompile Include="UResourceManager.cpp">
+      <Filter>00. Engine\01. System\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="USceneManager.cpp">
+      <Filter>00. Engine\01. System\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="UTexture2D.cpp">
+      <Filter>00. Engine\01. System\Resource\Texture2D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="ShaderW0.hlsl">
       <Filter>Shader Files</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
