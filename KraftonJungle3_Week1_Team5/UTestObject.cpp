@@ -92,7 +92,7 @@ void UTestObject::Render(ID3D11DeviceContext* context, ID3D11Device* device)
 	Shader->UpdateConstant(context, Position, Scale);
 	CubeMesh->Draw(context);
 }
-
+// 테스트 수정
 void UTestObject::Release()
 {
 	SafeReleaseAndDelete(CubeMesh);
