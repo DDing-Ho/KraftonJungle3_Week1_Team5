@@ -227,14 +227,14 @@ void UPikachu::HandleCollision(UBall* ball)
 	case EPlayerState::BasicSpike:
 		// 앞으로 적당하게
 		newXVel = xSign * 2.0f; // 수정해야함.
-		newYVel = 0.5f;
+		newYVel = 0.0f;
 		ball->SetSpike(true, Position);
 		break;
 
 	case EPlayerState::FrontSpike:
 		// 옆
 		newXVel = xSign * 4.0f;
-		newYVel = 2.0f;
+		newYVel = 0.0f;
 		ball->SetSpike(true, Position);
 
 		break;
@@ -394,14 +394,18 @@ void UPikachu::Move(float tick)
 			float targetX = ballPos.x + (ballVel.x * tick * 10.0f);
 			float targetY = ballPos.y + (ballVel.y * tick * 10.0f);
 
-			while (!(PositionLeftBorder < targetX && targetX < PositionRightBorder))
+			for (int i = 0; i < 3; ++i)
 			{
+				if (PositionLeftBorder <= targetX && targetX <= PositionRightBorder)
+				{
+					break;
+				}
+
 				if (targetX < PositionLeftBorder)
 				{
 					targetX = PositionLeftBorder + (PositionLeftBorder - targetX) * 0.9f;
 				}
-
-				if (targetX > PositionRightBorder)
+				else if (targetX > PositionRightBorder)
 				{
 					targetX = PositionRightBorder - (targetX - PositionRightBorder) * 0.9f;
 				}
