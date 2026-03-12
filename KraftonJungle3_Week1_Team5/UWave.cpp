@@ -1,5 +1,6 @@
 #include "UWave.h"
 #include "UUIImage.h"
+#include "Utility.h"
 
 UWave::UWave()
 {
@@ -20,7 +21,10 @@ void UWave::Create(ID3D11Device* device, ID3D11DeviceContext* context)
 
 void UWave::Release()
 {
-
+    for (int i = 0; i < 27; ++i)
+    {
+		SafeReleaseAndDelete(Waves[i]);
+    }
 }
 
 

@@ -34,6 +34,7 @@ public:
 	UTexture2D* GetCurrentFrame() const { return _currentTexture; }
 	std::string GetCurrentState() const { return CurrentState; }
 	bool isPlaying() const { return isPlayingAnimation; }	
+	void Release();
 
 private:
 	std::map<std::string, std::vector<UTexture2D*>> Animations;

@@ -184,6 +184,8 @@ void UBall::Release()
 	SafeDelete(BallTextureRenderer);
 	SafeReleaseAndDelete(BallTrail);
 	SafeReleaseAndDelete(BallHyper);
+	SafeReleaseAndDelete(BallPunch);
+	SafeReleaseAndDelete(AnimatorComponent);
 }
 
 void UBall::SetSpike(bool spike)

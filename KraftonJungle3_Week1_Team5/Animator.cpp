@@ -2,18 +2,22 @@
 
 #include "TextureRenderer.h"
 #include "UEngine.h"
+#include "UTexture2D.h"
+#include "Utility.h"
 
 Animator::Animator()
 {
 	ElapsedTime = 0.0f;
 	FrameDuration = 0.1f;
 	_currentTexture = nullptr;
+	CurrentMode = AnimationMode::Loop;
 }
 
 // 2. 소멸자 몸통
 Animator::~Animator()
 {
 	// 나중에 메모리 해제할 게 생기면 여기에 작성
+    Release();
 }
 void Animator::Play(std::string state, AnimationMode mode)
 {
@@ -177,5 +181,9 @@ void Animator::AddFrames(const std::string& state, const std::vector<std::wstrin
 
     }
 
+}
+
+void Animator::Release()
+{
 }
 

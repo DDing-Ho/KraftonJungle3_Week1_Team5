@@ -36,7 +36,8 @@ void TextureRenderer::Draw(ID3D11DeviceContext* context, ID3D11Device* device, F
 	{
 		return;
 	}
-	float flipScale = isFlipDraw ? -1.0f*Scale : 1.0f* Scale;
+
+	float flipScale = isFlipDraw ? -1.0f*Scale : 1.0f* Scale;	// Scale 값은 x에만 적용(좌우 반전용)
 	UpdateMeshForCurrentViewport(device, context);
 
 	ID3D11ShaderResourceView* srv = Texture->GetSRV();
